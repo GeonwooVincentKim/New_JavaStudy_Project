@@ -6,6 +6,20 @@ public class Tire {
     public String location;
 
     public Tire(String location, int maxRotation){
+        this.location = location;
+        this.maxRotation = maxRotation;
+    }
 
+    public boolean roll(){
+        ++accumlatedRotation;
+        if(accumlatedRotation < maxRotation){
+            System.out.println(location + " Tire 수명 : " + 
+            (maxRotation - accumlatedRotation) + "회");
+            
+            return true;
+        } else {
+            System.out.println("*** " + location + " Tire 펑크 ***");
+            return false;
+        }
     }
 }
