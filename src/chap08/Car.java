@@ -1,7 +1,15 @@
 package chap08;
 
 public class Car {
+    Tire frontLeftTire = new HankookTire();
+    Tire frontRightTire = new HankookTire();
+    Tire backLeftTire = new HankookTire();
+    Tire backRightTire = new HankookTire();
+
     void run(){
-        System.out.println("차가 달려유~");
+        frontLeftTire.roll();
+        frontRightTire.roll();
+        backLeftTire.roll();
+        backRightTire.roll();
     }
 }
