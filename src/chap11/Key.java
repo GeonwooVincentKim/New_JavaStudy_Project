@@ -8,6 +8,11 @@ public class Key {
     }
 
     @Override
+    public int hashCode(){
+        return number;
+    }
+
+    @Override
     public boolean equals(Object obj){
         if(obj instanceof Key){
             Key compareKey = (Key) obj;
