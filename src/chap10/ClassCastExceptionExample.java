@@ -13,12 +13,12 @@ public class ClassCastExceptionExample {
 
     public static void changeDog(Animal animal){
         Dog dog = (Dog) animal;
-        out.println("멍멍");
+        out.println(dog + " " + "멍멍");
     }
     
     public static void changeCat(Animal animal){
         Cat cat = (Cat) animal;
-        out.println("야옹");
+        out.println(cat + " " + "야옹");
     }
 }
 
