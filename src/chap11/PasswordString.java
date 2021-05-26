@@ -21,5 +21,6 @@ public class PasswordString {
         }
 
         System.out.println(count1 + "\n" + count2);
+        sc.close();
     }
 }
