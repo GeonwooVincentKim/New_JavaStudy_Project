@@ -13,20 +13,20 @@ public class BeepPrintExample2 {
         out.println(thread + " -> Non-InnerClass");
         thread.start();
 
-        // Thread newThread = new Thread(new Runnable(){
-        //     @Override
-        //     public void run(){
-        //         Toolkit toolkit = Toolkit.getDefaultToolkit();
-        //         out.println(toolkit);
+        Thread newThread = new Thread(new Runnable(){
+            @Override
+            public void run(){
+                Toolkit toolkit = Toolkit.getDefaultToolkit();
+                out.println(toolkit);
 
-        //         for(int i = 0; i < 5; i++){
-        //             toolkit.beep();
-        //             try { Thread.sleep(3000); } catch (Exception e) {}
-        //         }
-        //     }
-        // });
-        // out.println(newThread + " -> InnerClass");
-        // newThread.start();
+                for(int i = 0; i < 5; i++){
+                    toolkit.beep();
+                    try { Thread.sleep(500); } catch (Exception e) {}
+                }
+            }
+        });
+        out.println(newThread + " -> InnerClass");
+        newThread.start();
 
         for(int i = 0; i < 5; i++){
             out.println("띵");
