@@ -14,9 +14,18 @@ public class StringLengthExample {
         // out.println(v3);
         Scanner sc = new Scanner(System.in);
         String getInput = sc.nextLine();
+        String splitInput[] = getInput.split("");
+
+        // for(int i = 0; i < splitInput.)
 
         int length = 0;
         char convertToChar[] = getInput.toCharArray();
+        
+        int i = 0;
+        for(i = 0; i < splitInput.length; i++){
+            i++;
+        }
+        out.println(i);
 
         // for(int i = 0; i < convertToChar[i] && convertToChar[i] != '\0'; i++){
         //     if(convertToChar[i] == '\0'){
@@ -26,7 +35,7 @@ public class StringLengthExample {
         //     }
         // }
 
-        int i = 0;
+        i = 0;
         for(char strChar : getInput.toCharArray()){
             i++;
         }
