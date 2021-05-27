@@ -18,8 +18,8 @@ public class StringLengthExample {
 
         // for(int i = 0; i < splitInput.)
 
-        int length = 0;
-        char convertToChar[] = getInput.toCharArray();
+        // int length = 0;
+        // char convertToChar[] = getInput.toCharArray();
         
         int i = 0;
         for(i = 0; i < splitInput.length; i++){
@@ -37,6 +37,7 @@ public class StringLengthExample {
 
         i = 0;
         for(char strChar : getInput.toCharArray()){
+            System.out.println(strChar);
             i++;
         }
          
