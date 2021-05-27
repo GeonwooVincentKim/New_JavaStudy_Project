@@ -12,5 +12,11 @@ public class MainThreadExample {
 
         usr1.setCalculator(cal);
         usr1.start();
+
+        User2 usr2 = new User2();
+        out.println(usr2);
+
+        usr2.setCalculator(cal);
+        usr2.start();
     }
 }
