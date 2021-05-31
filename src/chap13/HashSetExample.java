@@ -43,14 +43,14 @@ public class HashSetExample {
         out.println("총 객체 수 : " + set.size());
 
         iter = set.iterator();
-        for(int i = 0; i < set.size(); i++){
-            String element = iter.next();
-            out.println("\t" + element);
-        }
-        
-        // for(String element : set){
+        // for(int i = 0; i < set.size(); i++){
+        //     String element = iter.next();
         //     out.println("\t" + element);
         // }
+
+        for(String element : set){
+            out.println("\t" + element);
+        }
 
         set.clear();
         if(set.isEmpty()) { out.println("비어 있음");}
