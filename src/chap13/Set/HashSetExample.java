@@ -1,4 +1,4 @@
-package chap13;
+package chap13.Set;
 
 import java.util.HashSet;
 import java.util.Iterator;
@@ -32,7 +32,7 @@ public class HashSetExample {
         Iterator<String> iter = set.iterator();
         out.println(iter);
 
-        while(iter.hasNext()){
+        while (iter.hasNext()) {
             String element = iter.next();
             out.println("\t" + element);
         }
@@ -44,15 +44,17 @@ public class HashSetExample {
 
         iter = set.iterator();
         // for(int i = 0; i < set.size(); i++){
-        //     String element = iter.next();
-        //     out.println("\t" + element);
+        // String element = iter.next();
+        // out.println("\t" + element);
         // }
 
-        for(String element : set){
+        for (String element : set) {
             out.println("\t" + element);
         }
 
         set.clear();
-        if(set.isEmpty()) { out.println("비어 있음");}
+        if (set.isEmpty()) {
+            out.println("비어 있음");
+        }
     }
 }

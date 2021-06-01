@@ -1,7 +1,9 @@
-package chap13;
+package chap13.Set;
 
 import java.util.HashSet;
 import java.util.Set;
+
+import chap13.Member;
 
 import static java.lang.System.out;
 
