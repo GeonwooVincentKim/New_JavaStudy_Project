@@ -9,6 +9,7 @@ import java.util.Set;
 import static java.lang.System.out;
 
 public class PersonInfoExample {
+
     public static void main(String[] args) {
         Map<PersonDTO, String> map = new HashMap<PersonDTO, String>();
         out.println(map);
@@ -20,15 +21,9 @@ public class PersonInfoExample {
 
         int i = 1;
 
-        Set<PersonDTO> keySet = map.keySet();
-        Iterator<PersonDTO> keyIterator = keySet.iterator();
-        while (keyIterator.hasNext()) {
-            PersonDTO key = keyIterator.next();
-            String value = map.get(key);
-            out.println("#" + i + " " + key.getUserID() + " " + key.getUserPWD() + " " + key.getName() + " "
-                    + key.getAge() + " " + value);
-            i++;
-        }
+        PersonGetData pGD = new PersonGetData();
+        pGD.printUserInfoAsMap(map);
+
         out.println("No.1 Size : " + map.size());
 
         out.println();
@@ -38,10 +33,10 @@ public class PersonInfoExample {
         i = 1;
 
         Set<Entry<PersonDTO, String>> entrySet = map.entrySet();
-        out.println(entrySet);
+        // out.println(entrySet);
 
         Iterator<Entry<PersonDTO, String>> entryIter = entrySet.iterator();
-        out.println(entryIter);
+        // out.println(entryIter);
 
         while (entryIter.hasNext()) {
             Entry<PersonDTO, String> entry = entryIter.next();
