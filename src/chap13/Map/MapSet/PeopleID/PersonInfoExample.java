@@ -37,9 +37,9 @@ public class PersonInfoExample {
         Scanner sc = new Scanner(System.in);
 
         while (true) {
-            out.println("아이디 및 비밀번호를 입력하세요.");
+            out.println("닉네임 및 비밀번호를 입력하세요.");
 
-            out.println("아이디 : ");
+            out.println("닉네임 : ");
             String id = sc.nextLine();
 
             out.println("비밀번호 : ");
@@ -58,7 +58,7 @@ public class PersonInfoExample {
                     out.println("비밀번호가 일치하지 않습니다");
                 }
             } else {
-                out.println("입력하신 아이디가 존재하지 않습니다");
+                out.println("입력하신 닉네임이 존재하지 않습니다");
             }
         }
 
