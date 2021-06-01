@@ -44,12 +44,14 @@ public class PersonInfoExample {
             if (!keyIterator.hasNext()) {
                 out.println("Cannot get the data more because data does not exists");
                 break;
-            } else {
+            } else if (keyIterator.hasNext()) {
                 PersonDTO key = keyIterator.next();
                 String value = map.get(key);
                 out.println("#" + (j + 1) + " " + key.getUserID() + " " + key.getUserPWD() + " " + key.getName() + " "
                         + key.getAge() + " " + value);
             }
         }
+
+        out.println(entrySet.size());
     }
 }
