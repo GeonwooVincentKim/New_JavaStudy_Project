@@ -35,10 +35,7 @@ public class PersonInfoExample {
 
         // Compare that the ID and userPWD is already exist in the Map area or not exist
         Scanner sc = new Scanner(System.in);
-        // String id = "LaCampanella";
-        // out.print(map.containsKey(id));
 
-        // out.print(map.containsKey(id));
         while (true) {
             out.println("아이디 및 비밀번호를 입력하세요.");
 
@@ -48,12 +45,13 @@ public class PersonInfoExample {
             out.println("비밀번호 : ");
             String pwd = sc.nextLine();
 
-            out.print(map);
-            // out.print(map.containsKey(id));
+            PersonDTO pDTO = map.get(id);
+
+            if (id.equals("exit"))
+                break;
 
             if (map.containsKey(id)) {
-                out.print(map.containsKey(id));
-                if (map.get(id).equals(pwd)) {
+                if (pDTO.getUserPWD().equals(pwd)) {
                     out.println("로그인 되었습니다");
                     break;
                 } else {

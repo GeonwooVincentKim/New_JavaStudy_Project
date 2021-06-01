@@ -1,7 +1,7 @@
 package chap13.Map.MapSet.PeopleID;
 
 public class PersonDTO {
-    String userID;
+    private String userID;
     private String userPWD;
     private String name;
     private int age;
