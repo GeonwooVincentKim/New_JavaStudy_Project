@@ -1,7 +1,9 @@
-package chap13;
+package chap13.List;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import chap13.Board;
 
 import static java.lang.System.out;
 
