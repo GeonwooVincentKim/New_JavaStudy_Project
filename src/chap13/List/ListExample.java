@@ -5,7 +5,6 @@ import static java.lang.System.out;
 import java.util.List;
 
 import chap13.Board;
-import chap13.BoardDao;
 
 public class ListExample {
     public static void main(String[] args) {
