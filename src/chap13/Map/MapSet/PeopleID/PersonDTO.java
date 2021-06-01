@@ -1,7 +1,7 @@
 package chap13.Map.MapSet.PeopleID;
 
 public class PersonDTO {
-    private String userID;
+    String userID;
     private String userPWD;
     private String name;
     private int age;
@@ -27,5 +27,18 @@ public class PersonDTO {
 
     public int getAge() {
         return age;
+    }
+
+    public boolean equals(Object obj) {
+        if (obj instanceof PersonDTO) {
+            PersonDTO pDTO = (PersonDTO) obj;
+            return (userID == pDTO.userID) && (userPWD == pDTO.userPWD);
+        } else {
+            return false;
+        }
+    }
+
+    public int hashCode() {
+        return userID.hashCode() + userPWD.hashCode();
     }
 }

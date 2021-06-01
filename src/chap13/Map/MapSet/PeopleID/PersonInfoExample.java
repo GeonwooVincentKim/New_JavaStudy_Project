@@ -13,6 +13,7 @@ public class PersonInfoExample {
         out.println(map);
 
         map.put(new PersonDTO("yourID", "yourPWD", "yourName", 16), "닉네임");
+        map.put(new PersonDTO("myID", "myPWD", "myName", 18), "넉네임");
         out.println(map.size());
 
         Set<PersonDTO> keySet = map.keySet();
