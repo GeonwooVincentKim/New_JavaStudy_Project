@@ -20,6 +20,7 @@ public class Test {
     public static void main(String[] args) {
         // int a = 72, b = 30;
         // int a = 30, b = 72;
+
         Scanner sc = new Scanner(System.in);
 
         int a = sc.nextInt();
