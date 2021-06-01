@@ -15,7 +15,6 @@ public class PersonInfoExample {
 
         map.put(new PersonDTO("yourID", "yourPWD", "yourName", 16), "닉네임");
         map.put(new PersonDTO("myID", "myPWD", "myName", 18), "넉네임");
-        out.println(map.size());
 
         out.println("Just Just Iterator Method --> ");
 
@@ -30,28 +29,32 @@ public class PersonInfoExample {
                     + key.getAge() + " " + value);
             i++;
         }
+        out.println("No.1 Size : " + map.size());
 
         out.println();
 
         out.println("Use Map Entry together");
+
+        i = 1;
+
         Set<Entry<PersonDTO, String>> entrySet = map.entrySet();
         out.println(entrySet);
 
         Iterator<Entry<PersonDTO, String>> entryIter = entrySet.iterator();
         out.println(entryIter);
 
-        for (int j = 0; j < entrySet.size(); j++) {
-            if (!keyIterator.hasNext()) {
-                out.println("Cannot get the data more because data does not exists");
-                break;
-            } else if (keyIterator.hasNext()) {
-                PersonDTO key = keyIterator.next();
-                String value = map.get(key);
-                out.println("#" + (j + 1) + " " + key.getUserID() + " " + key.getUserPWD() + " " + key.getName() + " "
-                        + key.getAge() + " " + value);
-            }
+        while (entryIter.hasNext()) {
+            Entry<PersonDTO, String> entry = entryIter.next();
+            PersonDTO key = entry.getKey();
+            String value = entry.getValue();
+            // Cannot use this because those are just for `Map` not for `Entry<Key, Value>`
+            // PersonDTO key = keyIterator.next();
+            // String value = map.get(entry);
+            out.println("#" + i + " " + key.getUserID() + " " + key.getUserPWD() + " " + key.getName() + " "
+                    + key.getAge() + " " + value);
+            i++;
         }
 
-        out.println(entrySet.size());
+        out.println("No.2 Size : " + entrySet.size());
     }
 }
