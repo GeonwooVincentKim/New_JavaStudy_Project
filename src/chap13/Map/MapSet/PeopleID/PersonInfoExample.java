@@ -16,6 +16,12 @@ public class PersonInfoExample {
         map.put(new PersonDTO("yourID", "yourPWD", "yourName", 16), "닉네임");
         map.put(new PersonDTO("myID", "myPWD", "myName", 18), "넉네임");
 
+        // Show when the <Key, Value> duplicates
+        map.put(new PersonDTO("myID", "myPWD", "myName", 18), "넉네임");
+
+        // Convert Value, "넉네임" as "눅네임"
+        map.put(new PersonDTO("myID", "myPWD", "myName", 18), "눅네임");
+
         out.println("Just Just Iterator Method --> ");
 
         PersonGetData pGD = new PersonGetData();
