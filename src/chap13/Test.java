@@ -1,5 +1,7 @@
 package chap13;
 
+import java.util.Scanner;
+
 public class Test {
     public static int gcd(int a, int b) {
         if (b == 0)
@@ -17,7 +19,12 @@ public class Test {
 
     public static void main(String[] args) {
         // int a = 72, b = 30;
-        int a = 30, b = 72;
+        // int a = 30, b = 72;
+        Scanner sc = new Scanner(System.in);
+
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+
         System.out.println(a + " " + b);
 
         if (a < b) {
@@ -28,6 +35,8 @@ public class Test {
             int c = gcd(a, b);
             System.out.println(c);
         }
+
+        sc.close();
 
         // int r = a % b;
         // System.out.println(r);
