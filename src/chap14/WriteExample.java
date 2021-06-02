@@ -49,10 +49,10 @@ public class WriteExample {
 
     public static void main(String[] args) throws Exception {
         String fLocation = "E:/NewJavaBasicProject/New_JavaProject/";
-        OutputStream os = createFile(fLocation + "test1.db");
+        OutputStream os = createFile(fLocation + "test0.db");
         getData(os);
 
-        OutputStream os1 = createFile(fLocation + "src/chap14/test2.db");
+        OutputStream os1 = createFile(fLocation + "src/chap14/test1.db");
         getData(os1);
     }
 }
