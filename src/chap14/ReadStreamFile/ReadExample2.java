@@ -47,8 +47,12 @@ public class ReadExample2 {
 
         if (readByteNum != -1) {
             for (int i = 0; i < buffer.length; i++) {
-                result[i] = buffer[i];
-                // out.println(buffer[i]);
+                // Subsititude when there are `0` in the buffer[i] String
+                if (buffer[i] == 0) {
+                    result[i] = 1; // Convert as ''
+                } else {
+                    result[i] = buffer[i];
+                }
                 out.println(result[i]);
             }
         }
