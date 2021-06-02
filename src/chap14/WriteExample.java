@@ -48,24 +48,11 @@ public class WriteExample {
     }
 
     public static void main(String[] args) throws Exception {
-        String fLocation = "E:/NewJavaBasicProject/New_JavaProject/test1.db";
-        OutputStream os = createFile(fLocation);
+        String fLocation = "E:/NewJavaBasicProject/New_JavaProject/";
+        OutputStream os = createFile(fLocation + "test1.db");
         getData(os);
-        // out.println(getResult);
-        // writeFile(os, getResult);
 
-        // byte a = 10;
-        // byte b = 20;
-        // byte c = 30;
-
-        // os.write(a);
-        // os.write(b);
-        // os.write(c);
-
-        // os.flush();
-        // os.close();
-
-        OutputStream os1 = new FileOutputStream("E:/NewJavaBasicProject/New_JavaProject/src/chap14/test2.db");
-        out.println(os1);
+        OutputStream os1 = createFile(fLocation + "src/chap14/test2.db");
+        getData(os1);
     }
 }
