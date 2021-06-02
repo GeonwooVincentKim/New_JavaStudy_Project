@@ -23,9 +23,6 @@ public class WriteExample {
 
     public static int getData(OutputStream os) {
         String result = "";
-        String result1 = "";
-        String result2 = "";
-
         int getResult = 0;
 
         byte a = 10;
@@ -34,10 +31,8 @@ public class WriteExample {
 
         out.println(a + b + c);
         result = String.valueOf(a);
-        result1 = String.valueOf(b);
-        result2 = String.valueOf(c);
 
-        result = result + result1 + result2;
+        result += a + b + c;
         out.println(result);
 
         getResult = Integer.parseInt(result);
