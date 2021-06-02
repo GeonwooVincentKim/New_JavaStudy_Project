@@ -30,6 +30,7 @@ public class ReadExample {
                 out.println(getResult);
                 os.flush();
             }
+
             os.close();
         } catch (Exception e) {
             e.printStackTrace();
@@ -58,8 +59,8 @@ public class ReadExample {
     public static void main(String[] args) throws Exception {
         String fLocate = "WriteStreamFile/test1.db";
         InputStream is = readFile(fLocate);
+
         int[] getResult = getData(is);
-        // getData(is);
         writeData(getResult, fLocate);
 
         is.close();
