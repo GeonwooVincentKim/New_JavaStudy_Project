@@ -37,8 +37,6 @@ public class ReadExample {
     }
 
     public static int[] getData(InputStream readFile) throws Exception {
-        // int result = readFile.read();
-        // return readLine;
         int result[] = new int[3];
         int data = 0;
         int i = 0;
