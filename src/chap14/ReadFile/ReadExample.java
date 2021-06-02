@@ -6,20 +6,41 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 
 public class ReadExample {
-    public static void main(String[] args) throws Exception {
-        String fLocate = "E:/NewJavaBasicProject/New_JavaProject/src/chap14/";
+    public static InputStream readFile(String fLocate) {
+        InputStream is = null;
 
-        InputStream is = new FileInputStream(fLocate + "WriteStreamFile/test1.db");
-        out.println(is);
+        try {
+            is = new FileInputStream("E:/NewJavaBasicProject/New_JavaProject/src/chap14/" + fLocate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return is;
+    }
+
+    public static String getData(InputStream readFile) {
+        String result = "";
+        int data = 0;
 
         while (true) {
-            int data = is.read();
+            try {
+                data = readFile.read();
+                if (data == -1)
+                    break;
 
-            if (data == -1)
-                break;
-
-            out.println(data);
+                out.println(data);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
         }
+
+        return result;
+    }
+
+    public static void main(String[] args) throws Exception {
+        String fLocate = "WriteStreamFile/test1.db";
+        InputStream is = readFile(fLocate);
+        getData(is);
 
         is.close();
     }
