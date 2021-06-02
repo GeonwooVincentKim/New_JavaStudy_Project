@@ -1,4 +1,4 @@
-package chap14;
+package chap14.WriteStreamFile;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -52,7 +52,7 @@ public class WriteExample {
         OutputStream os = createFile(fLocation + "test0.db");
         getData(os);
 
-        OutputStream os1 = createFile(fLocation + "src/chap14/test1.db");
+        OutputStream os1 = createFile(fLocation + "src/chap14/WriteStreamFile/test1.db");
         getData(os1);
     }
 }

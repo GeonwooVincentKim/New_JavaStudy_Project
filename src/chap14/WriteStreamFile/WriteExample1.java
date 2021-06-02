@@ -1,4 +1,4 @@
-package chap14;
+package chap14.WriteStreamFile;
 
 import static java.lang.System.out;
 
@@ -52,7 +52,7 @@ public class WriteExample1 {
         OutputStream os = createFile(fLocation + "test0.db");
         getData(os);
 
-        OutputStream os1 = createFile(fLocation + "/src/chap14/test1.db");
+        OutputStream os1 = createFile(fLocation + "src/chap14/WriteStreamFile/test2.db");
         out.println(fLocation + "src/chap14/test1.db");
         getData(os1);
     }
