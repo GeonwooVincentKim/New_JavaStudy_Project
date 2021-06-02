@@ -22,41 +22,48 @@ public class WriteExample {
     }
 
     public static int getData(OutputStream os) {
-        String result = "";
+        int result[] = new int[3];
         int getResult = 0;
 
         byte a = 10;
         byte b = 20;
         byte c = 30;
 
-        out.println(a + b + c);
-        result = String.valueOf(a);
+        result[0] = a;
+        result[1] = b;
+        result[2] = c;
 
-        result += a + b + c;
-        out.println(result);
-
-        getResult = Integer.parseInt(result);
-        out.println(getResult);
+        try {
+            os.write(result[0]);
+            os.write(result[1]);
+            os.write(result[2]);
+            os.flush();
+            os.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
         return getResult;
     }
 
-    public static void writeFile(OutputStream os, int getResult) {
-        try {
-            os.write(getResult);
-            os.flush();
-            os.close();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    // public static void writeFile(OutputStream os, int getResult) {
+    // try {
+    // os.write(getResult);
+    // os.flush();
+    // os.close();
+    // } catch (IOException e) {
+    // e.printStackTrace();
+    // }
+    // }
 
     public static void main(String[] args) throws Exception {
         String fLocation = "E:/NewJavaBasicProject/New_JavaProject/test1.db";
         OutputStream os = createFile(fLocation);
-        int getResult = getData(os);
-        out.println(getResult);
-        writeFile(os, getResult);
+        getData(os);
+        // out.println(getResult);
+        // writeFile(os, getResult);
 
         // byte a = 10;
         // byte b = 20;
