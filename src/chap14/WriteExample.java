@@ -2,6 +2,7 @@ package chap14;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 
 import static java.lang.System.out;
@@ -20,9 +21,47 @@ public class WriteExample {
         return os;
     }
 
+    public static int getData(OutputStream os) {
+        String result = "";
+        String result1 = "";
+        String result2 = "";
+
+        int getResult = 0;
+
+        byte a = 10;
+        byte b = 20;
+        byte c = 30;
+
+        out.println(a + b + c);
+        result = String.valueOf(a);
+        result1 = String.valueOf(b);
+        result2 = String.valueOf(c);
+
+        result = result + result1 + result2;
+        out.println(result);
+
+        getResult = Integer.parseInt(result);
+        out.println(getResult);
+
+        return getResult;
+    }
+
+    public static void writeFile(OutputStream os, int getResult) {
+        try {
+            os.write(getResult);
+            os.flush();
+            os.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
     public static void main(String[] args) throws Exception {
         String fLocation = "E:/NewJavaBasicProject/New_JavaProject/test1.db";
-        createFile(fLocation);
+        OutputStream os = createFile(fLocation);
+        int getResult = getData(os);
+        out.println(getResult);
+        writeFile(os, getResult);
 
         // byte a = 10;
         // byte b = 20;
