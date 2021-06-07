@@ -8,7 +8,9 @@ public class Test3 {
         int test = sc.nextInt();
         for (int t = 1; t <= test; t++) {
             String s = sc.next();
-
+            System.out.println(s);
         }
+
+        sc.close();
     }
 }
