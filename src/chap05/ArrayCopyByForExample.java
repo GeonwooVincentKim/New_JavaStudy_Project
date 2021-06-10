@@ -24,6 +24,15 @@ public class ArrayCopyByForExample {
         return newArray;
     }
 
+    public static String printArray(int[] newIntArray) {
+        String result = "";
+        for (int i = 0; i < newIntArray.length; i++) {
+            out.print(newIntArray[i] + ", ");
+        }
+
+        return result;
+    }
+
     public static void main(String[] args) {
         int printLength = 3;
         out.println(printLength);
@@ -34,35 +43,16 @@ public class ArrayCopyByForExample {
         int[] oldIntArray = new int[printLength];
         out.println(oldIntArray.length);
 
-        // oldIntArray = getOldArray(oldIntArray);
-        extracted(oldIntArray);
+        oldIntArray = getOldArray(oldIntArray);
+        // extracted(oldIntArray);
 
         int[] newIntArray = new int[newPrintLength];
 
-        // newIntArray = getNewArray(oldIntArray);
-        extracted2(oldIntArray, newIntArray);
+        newIntArray = getNewArray(oldIntArray);
+        // extracted2(oldIntArray, newIntArray);
 
         out.println();
-        extracted3(newIntArray);
+        printArray(newIntArray);
     }
 
-    private static void extracted3(int[] newIntArray) {
-        for (int i = 0; i < newIntArray.length; i++) {
-            out.print(newIntArray[i] + ", ");
-        }
-    }
-
-    private static void extracted2(int[] oldIntArray, int[] newIntArray) {
-        for (int i = 0; i < oldIntArray.length; i++) {
-            newIntArray[i] = oldIntArray[i];
-            out.print(newIntArray[i] + " ");
-        }
-    }
-
-    private static void extracted(int[] oldIntArray) {
-        for (int i = 1; i <= 3; i++) {
-            oldIntArray[i - 1] = i;
-            out.print(oldIntArray[i - 1] + " ");
-        }
-    }
 }
