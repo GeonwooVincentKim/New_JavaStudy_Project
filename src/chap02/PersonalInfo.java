@@ -23,5 +23,7 @@ public class PersonalInfo {
         System.out.println(strName + " - 이름");
         System.out.println(strID);
         System.out.println(strNum);
+
+        sc.close();
     }
 }
