@@ -20,28 +20,30 @@ public class StringLengthExample {
 
         // int length = 0;
         // char convertToChar[] = getInput.toCharArray();
-        
-        int i = 0;
-        for(i = 0; i < splitInput.length; i++){
+
+        // int i = 0;
+
+        for (int i = 0; i < splitInput.length; i++) {
             i++;
+            out.print(i);
         }
-        out.println(i);
 
         // for(int i = 0; i < convertToChar[i] && convertToChar[i] != '\0'; i++){
-        //     if(convertToChar[i] == '\0'){
-        //         break;
-        //     } else {
-        //         length++;
-        //     }
+        // if(convertToChar[i] == '\0'){
+        // break;
+        // } else {
+        // length++;
         // }
+        // }
+        out.println();
 
-        i = 0;
-        for(char strChar : getInput.toCharArray()){
-            System.out.println(strChar);
+        int i = 0;
+        for (char strChar : getInput.toCharArray()) {
+            System.out.print(strChar + " ");
             i++;
         }
-         
-        out.println(i);
+
+        out.print(i);
         // out.println(length);
         sc.close();
     }
