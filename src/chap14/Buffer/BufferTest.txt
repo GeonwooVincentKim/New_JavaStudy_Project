@@ -1,0 +1,35 @@
+1 package chap14.Buffer;
+3 
+5 import static java.lang.System.out;
+7 
+9 import java.io.BufferedReader;
+11 import java.io.FileReader;
+13 import java.io.FileWriter;
+15 import java.io.Reader;
+17 
+19 public class BufferTest {
+21     public static void main(String[] args) throws Exception {
+23         out.println("Test");
+25 
+27         String filePath = "E:/NewJavaBasicProject/New_JavaProject/src/chap14/Buffer/";
+29         String fileName = "BufferTest.java";
+31         String writeFileName = "BufferTest.txt";
+33         Reader reader = new FileReader(filePath + fileName);
+35 
+37         BufferedReader br = new BufferedReader(reader);
+39         FileWriter fWriter = new FileWriter(filePath + writeFileName);
+41 
+43         int rowNumber = 0;
+45         String data;
+47         String result = "";
+49         while ((data = br.readLine()) != null) {
+51             result = ++rowNumber + " " + data + "\n";
+53             out.println(++rowNumber + " " + data);
+55             fWriter.write(result);
+57         }
+59 
+61         fWriter.close();
+63 
+65         br.close();
+67     }
+69 }
